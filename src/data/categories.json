@@ -1,0 +1,116 @@
+{
+  "categories": [
+    {
+      "id": "design",
+      "key": "categories.design",
+      "icon": "Palette",
+      "color": "#8B5CF6",
+      "subcategories": [
+        {
+          "id": "ui-ux",
+          "key": "subcategories.uiUx",
+          "icon": "Layout"
+        },
+        {
+          "id": "branding",
+          "key": "subcategories.branding",
+          "icon": "Fingerprint"
+        },
+        {
+          "id": "illustration",
+          "key": "subcategories.illustration",
+          "icon": "Brush"
+        },
+        {
+          "id": "motion",
+          "key": "subcategories.motion",
+          "icon": "Video"
+        }
+      ]
+    },
+    {
+      "id": "development",
+      "key": "categories.development",
+      "icon": "Code2",
+      "color": "#10B981",
+      "subcategories": [
+        {
+          "id": "frontend",
+          "key": "subcategories.frontend",
+          "icon": "Monitor"
+        },
+        {
+          "id": "backend",
+          "key": "subcategories.backend",
+          "icon": "Server"
+        },
+        {
+          "id": "mobile",
+          "key": "subcategories.mobile",
+          "icon": "Smartphone"
+        },
+        {
+          "id": "fullstack",
+          "key": "subcategories.fullstack",
+          "icon": "Layers"
+        }
+      ]
+    },
+    {
+      "id": "three-d",
+      "key": "categories.threeD",
+      "icon": "Box",
+      "color": "#F59E0B",
+      "subcategories": [
+        {
+          "id": "modeling",
+          "key": "subcategories.modeling",
+          "icon": "BoxSelect"
+        },
+        {
+          "id": "animation",
+          "key": "subcategories.animation",
+          "icon": "Film"
+        },
+        {
+          "id": "rendering",
+          "key": "subcategories.rendering",
+          "icon": "Camera"
+        },
+        {
+          "id": "vr-ar",
+          "key": "subcategories.vrAr",
+          "icon": "Glasses"
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "key": "categories.creative",
+      "icon": "Sparkles",
+      "color": "#EC4899",
+      "subcategories": [
+        {
+          "id": "photography",
+          "key": "subcategories.photography",
+          "icon": "Camera"
+        },
+        {
+          "id": "video",
+          "key": "subcategories.video",
+          "icon": "Video"
+        },
+        {
+          "id": "writing",
+          "key": "subcategories.writing",
+          "icon": "PenTool"
+        },
+        {
+          "id": "music",
+          "key": "subcategories.music",
+          "icon": "Music"
+        }
+      ]
+    }
+  ]
+}

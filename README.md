@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Portfolio with Next.js & PostgreSQL
+
+This is a modern, high-performance portfolio website built with the latest technologies.
+
+## Tech Stack
+
+- **Framework:** Next.js 15+ (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **UI Components:** Shadcn/ui (Radix UI)
+- **Database:** PostgreSQL
+- **ORM:** Drizzle ORM
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
 
 ## Getting Started
 
-First, run the development server:
+1.  **Install Dependencies:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    ```bash
+    npm install
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.  **Database Setup:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    Ensure you have a PostgreSQL database running. Create a `.env` file in the root directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```env
+    DATABASE_URL="postgres://user:password@localhost:5432/portfolio"
+    ```
 
-## Learn More
+    Push the schema to the database:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npx drizzle-kit push
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3.  **Run Development Server:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm run dev
+    ```
 
-## Deploy on Vercel
+    Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Home:** Hero section with animated introduction.
+- **Portfolio:** Showcase projects with filtering (tags) and database integration.
+- **Curriculum:** Professional timeline (Work & Education).
+- **Admin:** Simple interface to add new projects (`/admin`).
+- **Responsive:** Fully optimized for mobile and desktop.
+- **Dark Mode:** Built-in support (configured in Tailwind).
+
+## Customization
+
+- Edit `src/app/page.tsx` for the Home content.
+- Update `src/components/layout/Navigation.tsx` for menu items.
+- Modify `src/db/schema.ts` to add more fields to your content.

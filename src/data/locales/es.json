@@ -1,0 +1,102 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "curriculum": "Currículum",
+    "admin": "Admin",
+    "login": "Iniciar Sesión",
+    "logout": "Cerrar Sesión"
+  },
+  "hero": {
+    "available": "Disponible para contratos",
+    "title": "Creando Experiencias",
+    "titleHighlight": "Digitales",
+    "subtitle": "Desarrollador full-stack, diseñador UI/UX y artista 3D creando soluciones hermosas y funcionales.",
+    "viewPortfolio": "Ver Portafolio",
+    "viewCV": "Ver CV"
+  },
+  "features": {
+    "cleanCode": {
+      "title": "Código Limpio",
+      "description": "Escribiendo código mantenible, escalable y bien documentado siguiendo las mejores prácticas."
+    },
+    "modernStack": {
+      "title": "Stack Moderno",
+      "description": "Usando tecnologías de vanguardia como Next.js, TypeScript y Tailwind CSS."
+    },
+    "performance": {
+      "title": "Rendimiento",
+      "description": "Optimizando para velocidad, SEO y experiencia del usuario en todos los dispositivos."
+    }
+  },
+  "categories": {
+    "title": "Experiencia",
+    "subtitle": "Explora mi trabajo en diferentes dominios creativos y técnicos",
+    "design": "Diseño",
+    "development": "Desarrollo",
+    "threeD": "3D y Animación",
+    "creative": "Artes Creativas"
+  },
+  "subcategories": {
+    "uiUx": "UI/UX Design",
+    "branding": "Branding",
+    "illustration": "Ilustración",
+    "motion": "Motion Design",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Apps Móviles",
+    "fullstack": "Full Stack",
+    "modeling": "Modelado 3D",
+    "animation": "Animación",
+    "rendering": "Renderizado",
+    "vrAr": "VR/AR",
+    "photography": "Fotografía",
+    "video": "Producción de Video",
+    "writing": "Escritura",
+    "music": "Música"
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "subtitle": "Una selección de mis trabajos recientes en varias disciplinas",
+    "allProjects": "Todos los Proyectos",
+    "featured": "Proyectos Destacados",
+    "viewProject": "Ver Proyecto",
+    "viewCode": "Ver Código",
+    "noProjects": "No se encontraron proyectos en esta categoría",
+    "filterBy": "Filtrar por categoría"
+  },
+  "curriculum": {
+    "title": "Currículum Vitae",
+    "subtitle": "Mi trayectoria profesional, educación y habilidades",
+    "experience": "Experiencia Profesional",
+    "education": "Educación",
+    "skills": "Habilidades",
+    "present": "Presente",
+    "downloadCV": "Descargar CV"
+  },
+  "admin": {
+    "dashboard": "Panel",
+    "projects": "Proyectos",
+    "curriculum": "Currículum",
+    "categories": "Categorías",
+    "settings": "Configuración",
+    "addNew": "Agregar Nuevo",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "confirmDelete": "¿Estás seguro de que deseas eliminar este elemento?",
+    "totalProjects": "Total de Proyectos",
+    "totalCVItems": "Total de Elementos CV",
+    "featuredProjects": "Proyectos Destacados"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "success": "¡Éxito!",
+    "close": "Cerrar",
+    "learnMore": "Saber Más",
+    "getInTouch": "Contactar",
+    "language": "Idioma"
+  }
+}

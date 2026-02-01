@@ -1,0 +1,102 @@
+{
+  "navigation": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "curriculum": "Curriculum",
+    "admin": "Admin",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "hero": {
+    "available": "Available for hire",
+    "title": "Creating Digital",
+    "titleHighlight": "Experiences",
+    "subtitle": "Full-stack developer, UI/UX designer, and 3D artist crafting beautiful and functional solutions.",
+    "viewPortfolio": "View Portfolio",
+    "viewCV": "View CV"
+  },
+  "features": {
+    "cleanCode": {
+      "title": "Clean Code",
+      "description": "Writing maintainable, scalable, and well-documented code following best practices."
+    },
+    "modernStack": {
+      "title": "Modern Stack",
+      "description": "Using cutting-edge technologies like Next.js, TypeScript, and Tailwind CSS."
+    },
+    "performance": {
+      "title": "Performance",
+      "description": "Optimizing for speed, SEO, and user experience across all devices."
+    }
+  },
+  "categories": {
+    "title": "Expertise",
+    "subtitle": "Explore my work across different creative and technical domains",
+    "design": "Design",
+    "development": "Development",
+    "threeD": "3D & Animation",
+    "creative": "Creative Arts"
+  },
+  "subcategories": {
+    "uiUx": "UI/UX Design",
+    "branding": "Branding",
+    "illustration": "Illustration",
+    "motion": "Motion Design",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Mobile Apps",
+    "fullstack": "Full Stack",
+    "modeling": "3D Modeling",
+    "animation": "Animation",
+    "rendering": "Rendering",
+    "vrAr": "VR/AR",
+    "photography": "Photography",
+    "video": "Video Production",
+    "writing": "Writing",
+    "music": "Music"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "A selection of my recent work across various disciplines",
+    "allProjects": "All Projects",
+    "featured": "Featured Projects",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "noProjects": "No projects found in this category",
+    "filterBy": "Filter by category"
+  },
+  "curriculum": {
+    "title": "Curriculum Vitae",
+    "subtitle": "My professional journey, education, and skills",
+    "experience": "Work Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "present": "Present",
+    "downloadCV": "Download CV"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "curriculum": "Curriculum",
+    "categories": "Categories",
+    "settings": "Settings",
+    "addNew": "Add New",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirmDelete": "Are you sure you want to delete this item?",
+    "totalProjects": "Total Projects",
+    "totalCVItems": "Total CV Items",
+    "featuredProjects": "Featured Projects"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "close": "Close",
+    "learnMore": "Learn More",
+    "getInTouch": "Get in Touch",
+    "language": "Language"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "navigation": {
+    "home": "Início",
+    "portfolio": "Portfólio",
+    "curriculum": "Currículo",
+    "admin": "Admin",
+    "login": "Entrar",
+    "logout": "Sair"
+  },
+  "hero": {
+    "available": "Disponível para contratos",
+    "title": "Criando Experiências",
+    "titleHighlight": "Digitais",
+    "subtitle": "Desenvolvedor full-stack, designer UI/UX e artista 3D criando soluções bonitas e funcionais.",
+    "viewPortfolio": "Ver Portfólio",
+    "viewCV": "Ver CV"
+  },
+  "features": {
+    "cleanCode": {
+      "title": "Código Limpo",
+      "description": "Escrevendo código sustentável, escalável e bem documentado seguindo as melhores práticas."
+    },
+    "modernStack": {
+      "title": "Stack Moderno",
+      "description": "Usando tecnologias de ponta como Next.js, TypeScript e Tailwind CSS."
+    },
+    "performance": {
+      "title": "Performance",
+      "description": "Otimizando para velocidade, SEO e experiência do usuário em todos os dispositivos."
+    }
+  },
+  "categories": {
+    "title": "Expertise",
+    "subtitle": "Explore meu trabalho em diferentes domínios criativos e técnicos",
+    "design": "Design",
+    "development": "Desenvolvimento",
+    "threeD": "3D & Animação",
+    "creative": "Artes Criativas"
+  },
+  "subcategories": {
+    "uiUx": "UI/UX Design",
+    "branding": "Branding",
+    "illustration": "Ilustração",
+    "motion": "Motion Design",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Apps Mobile",
+    "fullstack": "Full Stack",
+    "modeling": "Modelagem 3D",
+    "animation": "Animação",
+    "rendering": "Renderização",
+    "vrAr": "VR/AR",
+    "photography": "Fotografia",
+    "video": "Produção de Vídeo",
+    "writing": "Escrita",
+    "music": "Música"
+  },
+  "portfolio": {
+    "title": "Portfólio",
+    "subtitle": "Uma seleção dos meus trabalhos recentes em várias disciplinas",
+    "allProjects": "Todos os Projetos",
+    "featured": "Projetos em Destaque",
+    "viewProject": "Ver Projeto",
+    "viewCode": "Ver Código",
+    "noProjects": "Nenhum projeto encontrado nesta categoria",
+    "filterBy": "Filtrar por categoria"
+  },
+  "curriculum": {
+    "title": "Currículo Vitae",
+    "subtitle": "Minha jornada profissional, educação e habilidades",
+    "experience": "Experiência Profissional",
+    "education": "Educação",
+    "skills": "Habilidades",
+    "present": "Presente",
+    "downloadCV": "Baixar CV"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "projects": "Projetos",
+    "curriculum": "Currículo",
+    "categories": "Categorias",
+    "settings": "Configurações",
+    "addNew": "Adicionar Novo",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "confirmDelete": "Tem certeza que deseja excluir este item?",
+    "totalProjects": "Total de Projetos",
+    "totalCVItems": "Total de Itens CV",
+    "featuredProjects": "Projetos em Destaque"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "success": "Sucesso!",
+    "close": "Fechar",
+    "learnMore": "Saiba Mais",
+    "getInTouch": "Entre em Contato",
+    "language": "Idioma"
+  }
+}
