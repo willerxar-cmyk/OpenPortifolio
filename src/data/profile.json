@@ -4,23 +4,50 @@
     "title": "Creative Developer & Designer",
     "bio": "Passionate about creating beautiful, functional, and user-centered digital experiences. Specializing in full-stack development, UI/UX design, and 3D graphics.",
     "email": "contact@example.com",
-    "phone": "+1 (555) 123-4567",
-    "location": "San Francisco, CA",
-    "website": "https://example.com",
-    "avatar": "/images/avatar.jpg",
-    "social": {
-      "github": "https://github.com/yourusername",
-      "linkedin": "https://linkedin.com/in/yourusername",
-      "twitter": "https://twitter.com/yourusername",
-      "dribbble": "https://dribbble.com/yourusername",
-      "behance": "https://behance.net/yourusername"
-    }
+    "emailPrivate": false,
+    "phone": "",
+    "phonePrivate": false,
+    "location": "",
+    "website": "",
+    "avatar": "/uploads/avatar/1769946630443-9wzhmd.png",
+    "social": [
+      {
+        "id": "1769946595270",
+        "platform": "other",
+        "url": "facebook.com"
+      },
+      {
+        "id": "1769946734152",
+        "platform": "github",
+        "url": "linkedin.com"
+      }
+    ]
   },
   "stats": {
-    "projectsCompleted": 50,
-    "yearsExperience": 8,
-    "happyClients": 30,
-    "awards": 5
+    "projectsCompleted": 0,
+    "yearsExperience": 0,
+    "happyClients": 0,
+    "awards": 0
+  },
+  "curriculum": {
+    "summary": "fdsadfasfasdfasdfasdf",
+    "experience": [
+      {
+        "company": "testes",
+        "role": "fasfsaf",
+        "location": "dsdds",
+        "startDate": "",
+        "endDate": "",
+        "current": true,
+        "description": "",
+        "id": "1769946756856"
+      }
+    ],
+    "education": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "interests": []
   },
   "availableForHire": true
 }
