@@ -24,7 +24,7 @@ export function Footer() {
 
   return (
     <footer className="border-t bg-muted/30">
-      <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16 pb-2">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand Section */}
           <div className="space-y-4">
@@ -94,12 +94,9 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground text-center md:text-left">
-            © {currentYear} Portfolio. All rights reserved.
-          </p>
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Made with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using Next.js & Tailwind
+        <div className="mt-8 border-t flex flex-col md:flex-row items-center justify-center gap-2 h-[30px] overflow-hidden">
+          <p className="text-xs text-muted-foreground text-center md:text-left truncate">
+            © {currentYear} Portfolio. All rights reserved. Made with <Heart className="h-3 w-3 text-red-500 fill-red-500 inline" /> using Next.js & Tailwind
           </p>
         </div>
       </div>

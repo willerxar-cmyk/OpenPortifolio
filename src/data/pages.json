@@ -1,0 +1,54 @@
+[
+  {
+    "id": "page-1",
+    "slug": "home",
+    "title": "Home",
+    "status": "published",
+    "published": true,
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z",
+    "metaTitle": {
+      "pt": "Home - Portfólio Criativo",
+      "en": "Home - Creative Portfolio",
+      "es": "Inicio - Portafolio Creativo"
+    },
+    "metaDescription": {
+      "pt": "Bem-vindo ao meu portfólio criativo",
+      "en": "Welcome to my creative portfolio",
+      "es": "Bienvenido a mi portafolio creativo"
+    },
+    "content": {
+      "content": [
+        {
+          "type": "Hero",
+          "props": {
+            "title": "Bem-vindo ao meu Portfólio",
+            "subtitle": "Criando experiências digitais incríveis"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "page-2",
+    "slug": "about",
+    "title": "About",
+    "status": "published",
+    "published": true,
+    "createdAt": "2026-01-02T00:00:00.000Z",
+    "updatedAt": "2026-01-02T00:00:00.000Z",
+    "metaTitle": {
+      "pt": "Sobre - Portfólio Criativo",
+      "en": "About - Creative Portfolio",
+      "es": "Acerca de - Portafolio Creativo"
+    },
+    "metaDescription": {
+      "pt": "Conheça mais sobre mim e meu trabalho",
+      "en": "Learn more about me and my work",
+      "es": "Conoce más sobre mí y mi trabajo"
+    },
+    "content": {
+      "content": []
+    }
+  }
+]

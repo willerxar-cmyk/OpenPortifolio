@@ -20,6 +20,7 @@ import { ArrowLeft, Star } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import categoriesData from '@/data/categories.json';
+import { ImageUpload } from '@/components/ui/image-upload';
 
 export default function NewProjectPage() {
   const { addProject } = useProjects();
@@ -151,15 +152,26 @@ export default function NewProjectPage() {
               </div>
             </div>
 
+            {/* Image Upload */}
+            <div className="space-y-2">
+              <Label>Project Image</Label>
+              <ImageUpload
+                value={formData.imageUrl}
+                onChange={(url) => setFormData({...formData, imageUrl: url || ''})}
+                folder="projects"
+                aspectRatio="video"
+              />
+            </div>
+
             {/* URLs */}
             <div className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="imageUrl">Image URL</Label>
+                <Label htmlFor="link">Project Link</Label>
                 <Input 
-                  id="imageUrl" 
+                  id="link" 
                   placeholder="https://..."
-                  value={formData.imageUrl}
-                  onChange={e => setFormData({...formData, imageUrl: e.target.value})}
+                  value={formData.link}
+                  onChange={e => setFormData({...formData, link: e.target.value})}
                 />
               </div>
 

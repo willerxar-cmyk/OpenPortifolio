@@ -134,3 +134,19 @@ export interface Tag {
 }
 
 export type PostStatus = 'draft' | 'published' | 'archived';
+
+export interface Page {
+  id: string;
+  slug: string;
+  title: string;
+  status: 'draft' | 'published' | 'archived';
+  published: boolean;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt?: string;
+  metaTitle?: Translations;
+  metaDescription?: Translations;
+  content: any; // Puck content structure
+}
+
+export type PageStatus = 'draft' | 'published' | 'archived';

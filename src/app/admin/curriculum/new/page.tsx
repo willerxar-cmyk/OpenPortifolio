@@ -13,6 +13,7 @@ import { Switch } from "@/components/ui/switch";
 import Link from 'next/link';
 import { ArrowLeft, Star } from 'lucide-react';
 import categoriesData from '@/data/categories.json';
+import { ImageUpload } from '@/components/ui/image-upload';
 
 export default function NewCurriculumPage() {
   const { addItem } = useCurriculum();
@@ -26,6 +27,7 @@ export default function NewCurriculumPage() {
     startDate: '',
     endDate: '',
     description: '',
+    imageUrl: '',
     type: 'work' as 'work' | 'education' | 'skill',
     category: '',
     tags: '',
@@ -44,6 +46,7 @@ export default function NewCurriculumPage() {
       startDate: formData.startDate || null,
       endDate: formData.endDate || null,
       description: formData.description || null,
+      imageUrl: formData.imageUrl || null,
       type: formData.type,
       category: formData.category,
       tags: formData.tags.split(',').map(t => t.trim()).filter(Boolean),
@@ -178,6 +181,17 @@ export default function NewCurriculumPage() {
                 rows={4}
                 value={formData.description}
                 onChange={e => setFormData({...formData, description: e.target.value})}
+              />
+            </div>
+
+            {/* Image Upload - Logo/Certificate */}
+            <div className="space-y-2">
+              <Label>Logo / Certificate Image</Label>
+              <ImageUpload
+                value={formData.imageUrl}
+                onChange={(url) => setFormData({...formData, imageUrl: url || ''})}
+                folder="curriculum"
+                aspectRatio="square"
               />
             </div>
 

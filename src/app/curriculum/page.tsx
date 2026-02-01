@@ -51,7 +51,7 @@ export default function CurriculumPage() {
         </motion.div>
       </div>
 
-      <div className="max-w-4xl mx-auto space-y-12">
+      <div className="space-y-12">
         {/* Summary */}
         <motion.section 
           initial={{ opacity: 0, y: 20 }}
