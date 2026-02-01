@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ImageUpload } from '@/components/ui/image-upload';
-import { Save, User, Briefcase, GraduationCap, Award, Languages, Heart, Plus, Trash2, GripVertical, ChevronDown, ChevronUp, Lock, EyeOff, Globe, Link2 } from 'lucide-react';
+import { Save, User, Briefcase, GraduationCap, Award, Languages, Heart, Plus, Trash2, GripVertical, ChevronDown, ChevronUp, Lock, EyeOff, Globe, Link2, FileText, Download, Printer } from 'lucide-react';
 import { toast } from 'sonner';
 import { Switch } from '@/components/ui/switch';
 import { Badge } from '@/components/ui/badge';
@@ -930,6 +930,62 @@ export default function AdminProfilePage() {
           </div>
         </div>
       )}
+
+      {/* PDF Preview & Download Section */}
+      <Card className="overflow-hidden border-primary/20">
+        <CardHeader 
+          className="cursor-pointer hover:bg-muted/50 transition-colors bg-primary/5"
+          onClick={() => setActiveSection(activeSection === 'pdf' ? null : 'pdf')}
+        >
+          <CardTitle className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <FileText className="h-5 w-5 text-primary" />
+              Preview & Download PDF
+            </div>
+            {activeSection === 'pdf' ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+          </CardTitle>
+        </CardHeader>
+        {activeSection === 'pdf' && (
+          <CardContent className="pt-6 space-y-6">
+            <div className="flex flex-col md:flex-row gap-4">
+              <Button 
+                onClick={() => window.open('/curriculum', '_blank')}
+                variant="outline"
+                className="gap-2"
+              >
+                <EyeOff className="h-4 w-4" />
+                Ver Curriculum Online
+              </Button>
+              <Button 
+                onClick={() => {
+                  const printWindow = window.open('/curriculum', '_blank');
+                  if (printWindow) {
+                    printWindow.onload = () => {
+                      printWindow.print();
+                    };
+                  }
+                }}
+                className="gap-2"
+              >
+                <Printer className="h-4 w-4" />
+                Imprimir / Salvar PDF
+              </Button>
+            </div>
+            
+            <div className="bg-muted/30 rounded-lg p-4 text-sm text-muted-foreground">
+              <p className="font-medium text-foreground mb-2">Dicas para PDF ATS-friendly:</p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Use a função de imprimir do navegador (Ctrl+P)</li>
+                <li>Selecione "Salvar como PDF"</li>
+                <li>Margens: Padrão ou Mínimas</li>
+                <li>Escala: Padrão (100%)</li>
+                <li>Remova cabeçalhos e rodapés nas opções</li>
+                <li>O PDF incluirá todas as informações (incluindo privadas)</li>
+              </ul>
+            </div>
+          </CardContent>
+        )}
+      </Card>
     </div>
   );
 }

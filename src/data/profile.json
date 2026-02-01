@@ -5,10 +5,10 @@
     "bio": "Passionate about creating beautiful, functional, and user-centered digital experiences. Specializing in full-stack development, UI/UX design, and 3D graphics.",
     "email": "contact@example.com",
     "emailPrivate": false,
-    "phone": "",
+    "phone": "128382145812843",
     "phonePrivate": false,
-    "location": "",
-    "website": "",
+    "location": "sao paulo, sp",
+    "website": "adsfdasfas.com",
     "avatar": "/uploads/avatar/1769946630443-9wzhmd.png",
     "social": [
       {
@@ -24,10 +24,9 @@
     ]
   },
   "stats": {
-    "projectsCompleted": 0,
-    "yearsExperience": 0,
-    "happyClients": 0,
-    "awards": 0
+    "projectsCompleted": 112321,
+    "yearsExperience": 16,
+    "happyClients": 43
   },
   "curriculum": {
     "summary": "fdsadfasfasdfasdfasdf",
@@ -41,13 +40,81 @@
         "current": true,
         "description": "",
         "id": "1769946756856"
+      },
+      {
+        "company": "FFFFF",
+        "role": "SASSA",
+        "location": "SADSA",
+        "startDate": "2211-02",
+        "endDate": "122121-03",
+        "current": false,
+        "description": "SDFDSAF",
+        "id": "1769948345132"
       }
     ],
-    "education": [],
-    "skills": [],
-    "languages": [],
-    "certifications": [],
-    "interests": []
+    "education": [
+      {
+        "institution": "dffffdd",
+        "degree": "asdsad",
+        "field": "asD",
+        "startDate": "3423-12",
+        "endDate": "213323-02",
+        "description": "DSFsdafcdsaCSA",
+        "id": "1769948254703"
+      }
+    ],
+    "skills": [
+      {
+        "name": "DEVOPS",
+        "level": "intermediate",
+        "category": "general",
+        "id": "1769948308658"
+      },
+      {
+        "name": "DDSAFARFFDA",
+        "level": "intermediate",
+        "category": "general",
+        "id": "1769948318607"
+      }
+    ],
+    "languages": [
+      {
+        "name": "Português",
+        "proficiency": "native",
+        "id": "1769948222876"
+      },
+      {
+        "name": "Espanhol",
+        "proficiency": "fluent",
+        "id": "1769948234656"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "ASDFASFA",
+        "issuer": "ASDFADSF",
+        "date": "0023-03",
+        "url": "",
+        "id": "1769948327559"
+      }
+    ],
+    "awards": [
+      {
+        "id": "1769948327559",
+        "title": "Best Developer Award",
+        "issuer": "Tech Conference 2024",
+        "date": "2024-03",
+        "description": "Recognized for outstanding contribution to open source projects",
+        "url": ""
+      }
+    ],
+    "interests": [
+      {
+        "name": "ERFASF",
+        "icon": "",
+        "id": "1769948324011"
+      }
+    ]
   },
   "availableForHire": true
 }

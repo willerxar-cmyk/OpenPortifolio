@@ -2,14 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { 
   Briefcase, 
   GraduationCap, 
   Award, 
   Languages, 
-  Download, 
   Mail, 
   Phone, 
   MapPin, 
@@ -89,6 +87,12 @@ interface ProfileData {
     website: string;
     avatar: string;
     social: SocialLink[];
+  };
+  stats: {
+    projectsCompleted: number;
+    yearsExperience: number;
+    happyClients: number;
+    awards: number;
   };
   curriculum: {
     summary: string;
@@ -183,11 +187,11 @@ export default function CurriculumPage() {
     );
   }
 
-  const { profile, curriculum } = profileData;
+  const { profile, stats, curriculum } = profileData;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
-      <div className="w-full max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+      <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
         
         {/* Hero Section - Two Column Layout */}
         <motion.section
@@ -330,18 +334,6 @@ export default function CurriculumPage() {
                   </a>
                 )}
               </motion.div>
-
-              {/* Download CV Button */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                <Button size="lg" className="gap-2 rounded-full px-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <Download className="w-4 h-4" />
-                  {t('curriculum.downloadCV')}
-                </Button>
-              </motion.div>
             </div>
           </div>
         </motion.section>
@@ -349,6 +341,43 @@ export default function CurriculumPage() {
         {/* Content Sections */}
         <div className="space-y-12">
           
+          {/* Stats Section */}
+          {(stats.projectsCompleted > 0 || stats.yearsExperience > 0 || stats.happyClients > 0 || stats.awards > 0) && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {stats.projectsCompleted > 0 && (
+                  <div className="bg-white rounded-2xl p-6 shadow-sm border border-border/50 text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-1">{stats.projectsCompleted}</div>
+                    <div className="text-sm text-muted-foreground">Projetos Concluídos</div>
+                  </div>
+                )}
+                {stats.yearsExperience > 0 && (
+                  <div className="bg-white rounded-2xl p-6 shadow-sm border border-border/50 text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-1">{stats.yearsExperience}</div>
+                    <div className="text-sm text-muted-foreground">Anos de Experiência</div>
+                  </div>
+                )}
+                {stats.happyClients > 0 && (
+                  <div className="bg-white rounded-2xl p-6 shadow-sm border border-border/50 text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-1">{stats.happyClients}</div>
+                    <div className="text-sm text-muted-foreground">Clientes Satisfeitos</div>
+                  </div>
+                )}
+                {stats.awards > 0 && (
+                  <div className="bg-white rounded-2xl p-6 shadow-sm border border-border/50 text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-1">{stats.awards}</div>
+                    <div className="text-sm text-muted-foreground">Prêmios</div>
+                  </div>
+                )}
+              </div>
+            </motion.section>
+          )}
+
           {/* Experience Timeline */}
           {curriculum.experience.length > 0 && (
             <motion.section
@@ -611,7 +640,7 @@ export default function CurriculumPage() {
             >
               <Lock className="h-5 w-5 text-amber-600 flex-shrink-0" />
               <span>
-                Algumas informações de contato estão ocultas. Baixe o PDF completo para acessar todas as informações.
+                Algumas informações de contato estão ocultas. Entre em contato para mais informações.
               </span>
             </motion.div>
           )}

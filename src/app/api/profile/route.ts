@@ -23,7 +23,6 @@ const defaultProfile = {
     projectsCompleted: 0,
     yearsExperience: 0,
     happyClients: 0,
-    awards: 0,
   },
   curriculum: {
     summary: '',
@@ -32,6 +31,7 @@ const defaultProfile = {
     skills: [],
     languages: [],
     certifications: [],
+    awards: [],
     interests: [],
   },
   availableForHire: true,
