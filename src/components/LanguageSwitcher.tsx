@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Globe, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const languages = [
   { code: 'en', label: 'English', flag: '🇺🇸' },
@@ -28,7 +28,7 @@ export function LanguageSwitcher({ showLabel = false }: { showLabel?: boolean })
           size={showLabel ? "default" : "icon"} 
           className={showLabel ? "gap-2 px-3" : "h-9 w-9"}
         >
-          <Globe className="h-4 w-4" />
+          <span className="text-lg leading-none">{currentLang?.flag}</span>
           {showLabel && (
             <span className="text-sm font-medium">
               {currentLang?.flag} {currentLang?.label}

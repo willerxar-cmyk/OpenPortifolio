@@ -18,6 +18,85 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Project } from '@/types';
+
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+  t: (key: string) => string;
+}
+
+function ProjectCard({ project, index, t }: ProjectCardProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1 }}
+    >
+      <Card className="flex flex-col overflow-hidden h-full group hover:shadow-xl transition-all duration-300">
+        {project.imageUrl ? (
+          <div className="aspect-video relative overflow-hidden">
+            <Image
+              src={project.imageUrl}
+              alt={project.title}
+              fill
+              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+        ) : (
+          <div className="aspect-video bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center">
+            <span className="text-4xl font-bold text-primary/30">{project.title.charAt(0)}</span>
+          </div>
+        )}
+        
+        <CardHeader className="pb-2">
+          <div className="flex items-start justify-between gap-2">
+            <CardTitle className="text-lg">{project.title}</CardTitle>
+            {project.featured && (
+              <Star className="w-4 h-4 text-amber-500 fill-amber-500 flex-shrink-0" />
+            )}
+          </div>
+          <Badge variant="outline" className="w-fit capitalize text-xs">
+            {project.category}
+          </Badge>
+        </CardHeader>
+        
+        <CardContent className="flex-1 py-2">
+          <CardDescription className="text-sm line-clamp-2">
+            {project.description}
+          </CardDescription>
+          <div className="flex flex-wrap gap-1 mt-3">
+            {project.tags?.slice(0, 3).map((tag: string) => (
+              <Badge key={tag} variant="secondary" className="text-xs">{tag}</Badge>
+            ))}
+            {project.tags?.length > 3 && (
+              <Badge variant="secondary" className="text-xs">+{project.tags.length - 3}</Badge>
+            )}
+          </div>
+        </CardContent>
+        
+        <CardFooter className="flex gap-2 pt-2">
+          {project.githubUrl && (
+            <Button variant="outline" size="sm" asChild className="flex-1">
+              <Link href={project.githubUrl} target="_blank">
+                <Github className="mr-2 h-4 w-4" /> {t('portfolio.viewCode')}
+              </Link>
+            </Button>
+          )}
+          {project.link && (
+            <Button size="sm" asChild className="flex-1">
+              <Link href={project.link} target="_blank">
+                <ExternalLink className="mr-2 h-4 w-4" /> {t('portfolio.viewProject')}
+              </Link>
+            </Button>
+          )}
+        </CardFooter>
+      </Card>
+    </motion.div>
+  );
+}
 
 export default function PortfolioPage() {
   const { t } = useI18n();
@@ -32,7 +111,7 @@ export default function PortfolioPage() {
   const featuredProjects = getFeaturedProjects();
 
   return (
-    <div className="container py-12 space-y-12">
+    <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
       {/* Header */}
       <div className="text-center space-y-4">
         <motion.h1 
@@ -116,77 +195,5 @@ export default function PortfolioPage() {
         )}
       </section>
     </div>
-  );
-}
-
-function ProjectCard({ project, index, t }: { project: any, index: number, t: (key: string) => string }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 }}
-    >
-      <Card className="flex flex-col overflow-hidden h-full group hover:shadow-xl transition-all duration-300">
-        {project.imageUrl ? (
-          <div className="aspect-video relative overflow-hidden">
-            <Image
-              src={project.imageUrl}
-              alt={project.title}
-              fill
-              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </div>
-        ) : (
-          <div className="aspect-video bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center">
-            <span className="text-4xl font-bold text-primary/30">{project.title.charAt(0)}</span>
-          </div>
-        )}
-        
-        <CardHeader className="pb-2">
-          <div className="flex items-start justify-between gap-2">
-            <CardTitle className="text-lg">{project.title}</CardTitle>
-            {project.featured && (
-              <Star className="w-4 h-4 text-amber-500 fill-amber-500 flex-shrink-0" />
-            )}
-          </div>
-          <Badge variant="outline" className="w-fit capitalize text-xs">
-            {project.category}
-          </Badge>
-        </CardHeader>
-        
-        <CardContent className="flex-1 py-2">
-          <CardDescription className="text-sm line-clamp-2">
-            {project.description}
-          </CardDescription>
-          <div className="flex flex-wrap gap-1 mt-3">
-            {project.tags?.slice(0, 3).map((tag: string) => (
-              <Badge key={tag} variant="secondary" className="text-xs">{tag}</Badge>
-            ))}
-            {project.tags?.length > 3 && (
-              <Badge variant="secondary" className="text-xs">+{project.tags.length - 3}</Badge>
-            )}
-          </div>
-        </CardContent>
-        
-        <CardFooter className="flex gap-2 pt-2">
-          {project.githubUrl && (
-            <Button variant="outline" size="sm" asChild className="flex-1">
-              <Link href={project.githubUrl} target="_blank">
-                <Github className="mr-2 h-4 w-4" /> {t('portfolio.viewCode')}
-              </Link>
-            </Button>
-          )}
-          {project.link && (
-            <Button size="sm" asChild className="flex-1">
-              <Link href={project.link} target="_blank">
-                <ExternalLink className="mr-2 h-4 w-4" /> {t('portfolio.viewProject')}
-              </Link>
-            </Button>
-          )}
-        </CardFooter>
-      </Card>
-    </motion.div>
   );
 }

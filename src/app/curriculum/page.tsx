@@ -21,7 +21,7 @@ export default function CurriculumPage() {
   const featuredItems = getFeaturedItems();
 
   return (
-    <div className="container py-12 space-y-12">
+    <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
       {/* Header */}
       <div className="text-center space-y-4">
         <motion.h1 
